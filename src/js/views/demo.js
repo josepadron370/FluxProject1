@@ -13,10 +13,7 @@ export const Demo = () => {
 			<div className="card-deck">
 				{store.demo.map((item, index) => {
 					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
+						<div key={index} className="card" style={{ background: item.background }}>
 							<Link to={"/single/" + index}>
 								<span>Link to: {item.title}</span>
 							</Link>
@@ -30,7 +27,7 @@ export const Demo = () => {
 							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
 								Change Color
 							</button>
-						</li>
+						</div>
 					);
 				})}
 			</div>
